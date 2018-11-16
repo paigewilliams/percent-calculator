@@ -1,0 +1,36 @@
+.blank1 {
+  order: 1
+  padding: 20px;
+  width: 100px;
+  height: 50px;
+}
+
+.blank2 {
+  order: 3;
+  padding: 20px;
+  width: 100px;
+  height: 50px;
+  float: right;
+
+}
+
+.text {
+  order: 2;
+  color: red;
+  padding: 50px;
+  width: 100px;
+  height: 50px;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  background-color: tomato;
+  height: 100px;
+}
+
+#results {
+  display: none;
+}

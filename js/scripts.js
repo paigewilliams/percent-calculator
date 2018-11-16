@@ -2,7 +2,9 @@
 var calcPercent = function (number, percent) {
   var product = number * percent;
   var quotient = parseFloat(product / 100);
+  console.log(quotient)
   return quotient
+
 }
 
 var calcPercent2 = function (number, number1) {
@@ -26,3 +28,15 @@ var percentDecrease = function (number, number1){
   percentDecrease = parseInt(((number - number1)/ number) * 100)
   return percentDecrease
 }
+
+$(document).ready(function(){
+  $("#percent-calc").submit(function(event){
+    event.preventDefault()
+    var number = $("#number").val();
+    var percent = $("#percent").val();
+    
+    calcPercent(number, percent)
+
+
+})
+})
