@@ -2,9 +2,7 @@
 var calcPercent = function (number, percent) {
   var product = number * percent;
   var quotient = parseFloat(product / 100);
-  console.log(quotient)
   return quotient
-
 }
 
 var calcPercent2 = function (number, number1) {
@@ -28,15 +26,91 @@ var percentDecrease = function (number, number1){
   percentDecrease = parseInt(((number - number1)/ number) * 100)
   return percentDecrease
 }
+//UI Logic
+  function findNumber() {
+
+    }
+
+
+  function findPercent() {
+    $("#percent-back").click(function(){
+
+      ("#find-percent").hide();
+      ("#landing").show();
+    })
+  }
+
+  function percentIncrease() {
+    $("#increase-back").click(function(){
+      ("#percent-increase").hide();
+      ("#landing").show();
+    })
+  }
+
+  function percentDecrease() {
+    $("#decrease-back").click(function(){
+      ("#percent-increase").hide();
+      ("#landing").show();
+    })
+  }
+
 
 $(document).ready(function(){
+
+  $("#findNumber").click(function(){
+    $("#find-number").show()
+    $("#landing").hide()
+  });
+  $("#findPercent").click(function(){
+    $("#find-percent").show()
+    $("#landing").hide()
+  });
+  $("#percentIncrease").click(function(){
+    $("#percent-increase").show()
+    $("#landing").hide()
+  });
+  $("#percentDecrease").click(function(){
+    $("#percent-decrease").show()
+    $("#landing").hide()
+  });
+  $("#number-back").click(function(){
+    $("#find-number").hide()
+    $("#landing").show()
+  });
+  $("#percent-back").click(function(){
+    $("#find-percent").hide()
+    $("#landing").show()
+  });
+  $("#increase-back").click(function(){
+    $("#percent-increase").hide()
+    $("#landing").show()
+  });
+  $("#decrease-back").click(function(){
+    $("#percent-decrease").hide()
+    $("#landing").show()
+  });
+
+
+
   $("#percent-calc").submit(function(event){
     event.preventDefault()
     var number = $("#number").val();
     var percent = $("#percent").val();
-    
-    calcPercent(number, percent)
+    var calc = calcPercent(number, percent)
 
+    $(".result").html(calc)
+    $("#results").show()
+    $(".container").hide()
+
+
+
+    $(".refresh").click(function(){
+      $("#number").val('');
+      $("#percent").val('');
+      $(".container").show()
+      $("#results").hide()
+
+    })
 
 })
 })

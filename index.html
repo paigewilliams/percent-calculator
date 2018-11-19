@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Percentage Calculator</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <form id="percent-calc">
-            <div class="blank1">
-              <input id="number" type="number">
-            </div>
-            <div class="text">
-              <h3>is the % of</h3>
-            </div>
-            <div class="blank2">
-              <input id="percent" type="number">
-            </div>
-
-          <button class="btn btn default" type="submit" name="button">Submit</button>
+    <div id="landing">
+      <input type="button" class="landing-btn" id="findNumber" value="Find Number">
+      <input type="button" class="landing-btn" id="findPercent" value="Find Percent">
+      <input type="button" class="landing-btn" id="percentIncrease" value="Percent Increase">
+      <input type="button" class="landing-btn" id="percentDecrease" value="Percent Decrease">
+    </div>
+    <div class="container" id="find-number">
+      <div class="column">
+        <form id="number-calc">
+          <fieldset class="values">
+            What is<input type='text' class="input" id="number" autofocus='autofocus'> % of
+            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            <input type="submit" class="submit" value="Submit">
+            <input type="button" class="back" id="number-back" value="Back">
+          </fieldset>
         </form>
       </div>
-      <div id="results">
+    </div>
+    <div class="container" id="find-percent">
+      <div class="column">
+        <form id="percent-calc">
+          <fieldset class="values">
+            <input type='text' class="input" id="number" autofocus='autofocus'> is what % of
+            <nobr> <input type='text' class="input"id="percent" size='7'>?</nobr>
+            <input type="submit" class="submit" value="Submit">
+            <input type="button" class="back" id="percent-back" value="Back">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="container" id="percent-increase">
+      <div class="column">
+        <form id="percent-increase-form">
+          <fieldset class="values">
+            What is the percent increase<input type='text' class="input" id="number" autofocus='autofocus'> to
+            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            <input type="submit" class="submit" value="Submit">
+            <input type="button" class="back" id="increase-back" value="Back">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="container" id="percent-decrease">
+      <div class="column">
+        <form id="percent-decrease">
+          <fieldset class="values">
+            What is the percent decrease<input type='text' class="input" id="number" autofocus='autofocus'> to
+            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            <input type="submit" class="submit" value="Submit">
+            <input type="button" class="back" id="decrease-back" value="Back">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div id="results">
+      <div class="output">
+        <h2><span class="result"></span></h2>
+        <input type="button" class="refresh" value="refresh">
       </div>
     </div>
   </body>
