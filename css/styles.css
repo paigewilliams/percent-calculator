@@ -106,7 +106,8 @@ body {
   background: transparent;
   background-color: #ff6600;
   border: 2px solid #fff;
-
+  text-align: center;
+  height: 100%;
   color: #fff;
   font-size: 30px;
   font-family: "Rubik", sans-serif;

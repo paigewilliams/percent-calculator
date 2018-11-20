@@ -1,6 +1,6 @@
 //Back-end logic
 var calcPercent = function (number, percent) {
-  var product = number * percent;
+  var product = parseFloat(number * percent);
   var quotient = parseFloat(product / 100);
   return quotient
 }
@@ -73,6 +73,9 @@ $(document).ready(function(){
     $("#percent-decrease").show()
     $("#landing").hide()
   });
+
+
+
   $("#number-back").click(function(){
     $("#find-number").hide()
     $("#landing").show()
@@ -90,27 +93,78 @@ $(document).ready(function(){
     $("#landing").show()
   });
 
-
-
-  $("#percent-calc").submit(function(event){
+  $("#number-calc").submit(function(event){
     event.preventDefault()
-    var number = $("#number").val();
     var percent = $("#percent").val();
-    var calc = calcPercent(number, percent)
+    var number = $("#number").val();
+    var calcNumber = calcPercent(number, percent)
 
-    $(".result").html(calc)
+    $(".result").html(calcNumber)
     $("#results").show()
     $(".container").hide()
-
-
 
     $(".refresh").click(function(){
       $("#number").val('');
       $("#percent").val('');
       $(".container").show()
       $("#results").hide()
-
     })
+  })
 
-})
+  $("#percent-calc").submit(function(event){
+    event.preventDefault()
+    var number2 = $("#number2").val();
+    var number3 = $("#number3").val();
+    var calcPercent = calcPercent2(number2, number3)
+
+    $(".result").html(calcPercent)
+    $("#results").show()
+    $(".container").hide()
+
+    $(".refresh").click(function(){
+      $("#number2").val('');
+      $("#number3").val('');
+      $(".container").show()
+      $("#results").hide()
+    })
+  })
+
+  $("#percent-increase-form").submit(function(event){
+    event.preventDefault()
+    var number5 = $("#number5").val();
+    var number6 = $("#number6").val();
+    var calcIncrease = percentIncrease(number5, number6)
+
+    $(".result").html(calcIncrease)
+    $("#results").show()
+    $(".container").hide()
+
+    $(".refresh").click(function(){
+      $("#number5").val('');
+      $("#number6").val('');
+      $(".container").show()
+      $("#results").hide()
+    })
+  })
+
+  $("#percent-decrease-form").submit(function(event){
+    event.preventDefault()
+    var number7 = $("#number7").val();
+    var number8 = $("#number8").val();
+    var calcDecrease = percentDecrease(number7, number8)
+
+    $(".result").html(calcDecrease +"%")
+    $("#results").show()
+    $(".container").hide()
+
+    $(".refresh").click(function(){
+      $("#number7").val('');
+      $("#number8").val('');
+      $("#percent-decrease").show()
+      $("#results").hide()
+    })
+  })
+
+
+
 })

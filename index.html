@@ -9,29 +9,31 @@
   </head>
   <body>
     <div id="landing">
-      <input type="button" class="landing-btn" id="findNumber" value="Find Number">
-      <input type="button" class="landing-btn" id="findPercent" value="Find Percent">
+      <input type="button" class="landing-btn" id="findNumber" value="Calculate value of a percentage of a value">
+      <input type="button" class="landing-btn" id="findPercent" value="Calculate percentage of value to a value">
       <input type="button" class="landing-btn" id="percentIncrease" value="Percent Increase">
       <input type="button" class="landing-btn" id="percentDecrease" value="Percent Decrease">
     </div>
+
     <div class="container" id="find-number">
       <div class="column">
         <form id="number-calc">
           <fieldset class="values">
-            What is<input type='text' class="input" id="number" autofocus='autofocus'> % of
-            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            What is<input type='number' class="input" id="percent" autofocus='autofocus'> % of
+            <nobr>of <input type='number' class="input" id="number" size='7'>?</nobr>
             <input type="submit" class="submit" value="Submit">
             <input type="button" class="back" id="number-back" value="Back">
           </fieldset>
         </form>
       </div>
     </div>
+
     <div class="container" id="find-percent">
       <div class="column">
         <form id="percent-calc">
           <fieldset class="values">
-            <input type='text' class="input" id="number" autofocus='autofocus'> is what % of
-            <nobr> <input type='text' class="input"id="percent" size='7'>?</nobr>
+            <input type='number' class="input" id="number2" autofocus='autofocus'> is what % of
+            <nobr> <input type='number' class="input"id="number3" size='7'>?</nobr>
             <input type="submit" class="submit" value="Submit">
             <input type="button" class="back" id="percent-back" value="Back">
           </fieldset>
@@ -42,8 +44,8 @@
       <div class="column">
         <form id="percent-increase-form">
           <fieldset class="values">
-            What is the percent increase<input type='text' class="input" id="number" autofocus='autofocus'> to
-            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            What is the percent increase<input type='text' class="input" id="number5" autofocus='autofocus'> to
+            <nobr><input type='text' class="input"id="number6" size='7'>?</nobr>
             <input type="submit" class="submit" value="Submit">
             <input type="button" class="back" id="increase-back" value="Back">
           </fieldset>
@@ -52,10 +54,10 @@
     </div>
     <div class="container" id="percent-decrease">
       <div class="column">
-        <form id="percent-decrease">
+        <form id="percent-decrease-form">
           <fieldset class="values">
-            What is the percent decrease<input type='text' class="input" id="number" autofocus='autofocus'> to
-            <nobr>of <input type='text' class="input"id="percent" size='7'>?</nobr>
+            What is the percent decrease<input type='text' class="input" id="number7" autofocus='autofocus'> to
+            <nobr><input type='text' class="input"id="number8" size='7'>?</nobr>
             <input type="submit" class="submit" value="Submit">
             <input type="button" class="back" id="decrease-back" value="Back">
           </fieldset>
